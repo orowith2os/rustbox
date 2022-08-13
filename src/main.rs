@@ -4,9 +4,9 @@
 //mod stop;
 //mod rm;
 //mod ephemeral;
+const VERSION: i32 = 0; //change this on version updates
 
 fn main() {
-    let version = 0;
     let availablecommands = "create
         enter
         list
@@ -14,7 +14,7 @@ fn main() {
         rm
         version";
     println!("Error: invalid command");
-    println!("Rustbox version: {version}");
+    println!("Rustbox version: {VERSION}");
     println!("Choose one of the available commands: \n 
         {availablecommands}");
  
