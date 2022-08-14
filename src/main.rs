@@ -1,6 +1,4 @@
-use clap::Parser;
-//use std::env::args;
-
+pub(crate) use clap::Parser;
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 #[derive(Parser, Debug)]
@@ -20,17 +18,17 @@ fn main() {
     }
 }
 
-fn noarguments() {
-    let availablecommands = "create
-        enter
-        list
-        stop
-        rm
-        version";
-    println!("Error: invalid command");
-    println!("Rustbox version: {VERSION}");
-    println!(
-        "Choose one of the available commands: \n 
-        {availablecommands}"
-    );
-}
+// fn noarguments() {
+//     let availablecommands = "create
+//         enter
+//         list
+//         stop
+//         rm
+//         version";
+//     println!("Error: invalid command");
+//     println!("Rustbox version: {VERSION}");
+//     println!(
+//         "Choose one of the available commands: \n 
+//         {availablecommands}"
+//     );
+// } I've commented these lines out, as Clap's built-in --help is good enough.
