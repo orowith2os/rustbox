@@ -1,13 +1,13 @@
 use clap::Parser;
 //use std::env::args;
 
-const VERSION: i32 = 0; //change this on version updates
+const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 #[derive(Parser, Debug)]
 #[clap(version, long_about = None)]
 struct Args {
     /// Print Rustbox's version
-    #[clap(long = "version", value_parser)]
+    #[clap(short = 'v', long = "version", value_parser)]
     version: bool,
 }
 
@@ -20,8 +20,7 @@ fn main() {
 }
 
 fn noarguments() {
-    let availablecommands = 
-       "create
+    let availablecommands = "create
         enter
         list
         stop
