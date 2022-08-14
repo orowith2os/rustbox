@@ -14,7 +14,8 @@ struct Args {
 fn main() {
     let args = Args::parse();
 
-    if args.version == true {
+    if args.version {}
+    {
         println!("Rustbox version: {VERSION}");
     }
 }
