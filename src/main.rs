@@ -1,17 +1,21 @@
-
-
+pub(crate) use clap::Parser;
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
-mod args;
-
+#[derive(Parser, Debug)]
+#[clap(version, long_about = None)]
+struct Args {
+    /// Print Rustbox's version
+    #[clap(short = 'v', long = "version", value_parser)]
+    version: bool,
+}
 fn main() {
     let args = Args::parse();
-
     if args.version {}
     {
         println!("Rustbox version: {VERSION}");
     }
 }
+
 
 // fn noarguments() {
 //     let availablecommands = "create
