@@ -1,13 +1,8 @@
-pub(crate) use clap::Parser;
+
+
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
-#[derive(Parser, Debug)]
-#[clap(version, long_about = None)]
-struct Args {
-    /// Print Rustbox's version
-    #[clap(short = 'v', long = "version", value_parser)]
-    version: bool,
-}
+mod args;
 
 fn main() {
     let args = Args::parse();
