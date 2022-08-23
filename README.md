@@ -1,6 +1,9 @@
 # rustbox
 ## A replacement for distrobox, written in Rust.
 
-The plan for now is to take advantage of the distrobox shell scripts, with them having priority over the Rust equivalents. 
+Compatibility with distrobox syntax will be a second-class citizen for now, in favor of making it function how it sees fit.
 
-This will ensure compatibility with preexisting containers, and the ability to easily make new containers.
+- [ ] Make a fully-featured `main.rs`
+- [ ] Implement `create`
+- [ ] Implement `init`
+- [ ] Implement `ephemeral`
