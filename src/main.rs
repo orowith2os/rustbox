@@ -2,7 +2,7 @@ pub(crate) use clap::Parser;
 
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
-mod host-exec/host-exec;
+mod hostexec;
 
 #[derive(Parser, Debug)]
 #[clap(version, long_about = None)]

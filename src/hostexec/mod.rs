@@ -1,7 +1,7 @@
 //use std::process::Command;
 use which::which;
 
-fn host-exec() {
+fn hostexec() {
     let hostspawn = which("host-spawn");
-    println!("{}", hostspawn)
+    println!("{:?}", hostspawn)
 }
